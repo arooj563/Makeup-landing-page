@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arooj's Make Up Brand</title>
+  <meta name="description" content="Premium makeup products - Lipstick, Foundation, Lip Gloss, Compact Powder">
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header>
+    <nav>
+      <div class="logo">Arooj's Brand</div>
+      <div class="menu">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#cart" class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span id="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  
+  <section id="home">
+    <div class="hero">
+      <h1>Welcome to Arooj's Brand</h1>
+      <p>Beauty that defines you 💄✨</p>
+      <a href="#products" class="shop-btn">Shop Now</a>
+    </div>
+  </section>
+
+  
+  <section id="about">
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p>
+        Welcome to <strong>Arooj's Brand</strong> – where beauty meets elegance.  
+        We believe in creating high-quality makeup products that not only enhance your beauty but also care for your skin.  
+        Our mission is to provide premium lipsticks, foundations, and skincare essentials at affordable prices.
+      </p>
+      <p>
+        Every product is crafted with love, cruelty-free ingredients, and shades designed for every skin tone.  
+        Because you deserve to feel confident and beautiful every day. 💄✨
+      </p>
+    </div>
+  </section>
+
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-container">
+      
+      
+      <div class="product-card">
+        <div class="img-container">
+          <img src="lipstick.jpg" 
+               alt="Matte Lipstick - Long lasting smooth finish" 
+               loading="lazy"
+               width="600" 
+               height="600">
+        </div>
+        <h3>Matte Lipstick</h3>
+        <p>Long-lasting, smooth finish</p>
+        <span class="price">$15</span>
+        <button onclick="addToCart('Matte Lipstick', 15)">Add to Cart</button>
+      </div>
+
+  
+      <div class="product-card">
+        <div class="img-container">
+          <img src="foundation.jpg" 
+               alt="Silk Foundation - Full coverage lightweight feel" 
+               loading="lazy"
+               width="600" 
+               height="600">
+        </div>
+        <h3>Silk Foundation</h3>
+        <p>Full coverage, lightweight feel</p>
+        <span class="price">$25</span>
+        <button onclick="addToCart('Silk Foundation', 25)">Add to Cart</button>
+      </div>
+
+    
+      <div class="product-card">
+        <div class="img-container">
+          <img src="lipgloss.jpg" 
+               alt="Shiny Lip Gloss - Glossy finish nourishing oils" 
+               loading="lazy"
+               width="600" 
+               height="600">
+        </div>
+        <h3>Shiny Lip Gloss</h3>
+        <p>Glossy finish, nourishing oils</p>
+        <span class="price">$12</span>
+        <button onclick="addToCart('Shiny Lip Gloss', 12)">Add to Cart</button>
+      </div>
+
+      
+      <div class="product-card">
+        <div class="img-container">
+          <img src="compact powder.jpg" 
+               alt="Compact Powder - Oil control smooth skin look" 
+               loading="lazy"
+               width="600" 
+               height="600">
+        </div>
+        <h3>Compact Powder</h3>
+        <p>Oil-control, smooth skin look</p>
+        <span class="price">$18</span>
+        <button onclick="addToCart('Compact Powder', 18)">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section id="cart">
+    <div class="cart-container">
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items">
+        <p class="empty-cart">Your cart is empty 🛒</p>
+      </div>
+      <div class="cart-total">
+        <h3>Total: $<span id="cart-total">0</span></h3>
+        <button onclick="checkout()" class="checkout-btn">Checkout</button>
+        <button onclick="clearCart()" class="clear-btn">Clear Cart</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p>Have questions or want to know more about our products? Get in touch</p>
+      
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      
+      <div id="form-message"></div>
+    </div>
+  </section>
+
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3>Arooj's Brand</h3>
+        <p>Beauty that defines you</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Arooj's Brand. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  
+  <div id="cart-notification" class="cart-notification">
+    <span id="notification-text">Item added to cart!</span>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
